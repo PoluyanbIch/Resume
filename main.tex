@@ -1,0 +1,108 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\usepackage[main=russian, english]{babel} % Подключение русского языка
+\usepackage[left=1.5cm, right=1.5cm, top=1.5cm, bottom=1.5cm]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+\hypersetup{colorlinks=true, linkcolor=black, filecolor=black, urlcolor=blue!70!black}
+\usepackage{enumitem}
+\usepackage{titlesec}
+
+\titleformat{\section}{\large\bfseries\uppercase}{}{0em}{}[\titlerule\vspace{0.5ex}]
+\titlespacing{\section}{0pt}{10pt}{5pt}
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+% -------------------- HEADER --------------------
+\begin{center}
+    {\Huge \textbf{Игорь Полуянов}} \\[0.3cm]
+    {\huge Go-разработчик} \\[0,3cm]
+    Санкт-Петербург | +7 992 200 8123 | \href{mailto:poluyanovia@yandex.ru}{poluyanovia@yandex.ru} \\
+    \href{https://github.com/PoluyanbIch}{github.com/PoluyanbIch} | Telegram: \href{https://t.me/PoluyanbIch}{@PoluyanbIch}
+\end{center}
+
+% -------------------- SUMMARY --------------------
+\section{Обо мне}
+\textbf{Backend-разработчик} с опытом на \textbf{Go}, \textbf{Python} и \textbf{Java}. Проектировал микросервисную архитектуру и REST API в рамках коммерческой стажировки и 6 хакатонов. Оптимизировал SQL-запросы, сократив время выборки данных на 40\%. Быстро осваиваю новые технологии и пишу production-код с покрытием тестов 80\%+.
+
+% -------------------- EDUCATION --------------------
+\section{Образование}
+\textbf{Университет ИТМО} \hfill \textit{Ожидаемый год окончания: 2028} \\
+Бакалавриат, 2-й курс -- Факультет программной инженерии и компьютерной техники (ПИиКТ) \\
+\textit{Специальность: Программная инженерия, Системное и прикладное программное обеспечение}
+
+% -------------------- SKILLS --------------------
+\section{Навыки}
+\textbf{Языки программирования:} Golang, Python, Java \\
+\textbf{Технологии и архитектура:} Git, Docker, docker-compose, PostgreSQL, Kafka, NATS, MongoDB, Redis, REST API, gRPC, JWT-аутентификация, Unit-тестирование (Testify), Grafana, Kibana, Prometheus, Микросервисы, Гексагональная архитектура
+
+% -------------------- WORK EXPERIENCE --------------------
+\section{Опыт работы}
+\textbf{RIO SOFT} -- \textit{Пермь, Россия} \hfill \textit{Май 2025 -- Сен 2025} \\
+\textit{Стажер Backend-разработчик}
+\begin{itemize}[leftmargin=0.5cm, itemsep=2pt, topsep=2pt]
+    \item Разработал и внедрил 3 новые ключевые функции для внутреннего Telegram-бота с использованием \textbf{Python} и \textbf{REST API}, автоматизировав ежедневную отчетность для команды из 50+ сотрудников.
+    \item Поддерживал legacy веб-приложение на \textbf{Java} и \textbf{Spring MVC}: исправлял баги, рефакторил код, писал unit-тесты.
+    \item Оптимизировал SQL-запросы к \textbf{PostgreSQL} в критичных местах приложения: время выполнения запросов снизилось примерно на 40 \%.
+    \item Работал с \textbf{Git} для версионирования кода, участвовал в code review с более опытными разработчиками.
+    \item Унифицировал подход к передаче данных, заменив прямую работу с сущностями (Entity) на специализированные DTO, что позволило ускорить ответ API в среднем на 40\%.
+    
+    
+\end{itemize}
+
+% -------------------- PROJECTS & HACKATHONS --------------------
+\section{Проекты и Хакатоны}
+
+\textbf{Микросервисная поисковая система для xkcd.com} | \textit{Pet-проект} \hfill \textit{2025}
+\begin{itemize}[leftmargin=0.5cm, itemsep=0pt, topsep=2pt]
+    \item Спроектировал backend на \textbf{Go} (гексагональная архитектура), состоящий из 5 микросервисов (API Gateway, Search, AAA и др.) с синхронным взаимодействием по \textbf{gRPC} и асинхронным через брокер \textbf{NATS}.
+    \item Разработал масштабируемый полнотекстовый поиск на базе кастомного инвертированного индекса в \textbf{PostgreSQL}, настроив его автоматическую перестройку при обновлении контента.
+    \item Внедрил \textbf{JWT-аутентификацию} (Access/Refresh), написал кастомные middleware для защиты эндпоинтов (rate/concurrency limiter) и покрыл бизнес-логику модульными тестами (\textbf{Testify}), упаковав систему в \textbf{Docker Compose}.
+\end{itemize}
+
+\vspace{4pt}
+\textbf{Сервис отслеживания настроений в реальном времени} | \textit{Хакатон Мэра Москвы «ЛЦТ 2025»} \hfill \textit{2025}
+\begin{itemize}[leftmargin=0.5cm, itemsep=0pt, topsep=2pt]
+    \item Создал backend для аналитики в реальном времени на \textbf{Golang}, способный обрабатывать более 5000 симулированных клиентских событий в минуту.
+\end{itemize}
+
+
+\vspace{4pt}
+\textbf{Чат-бот для мессенджера} | \textit{Хакатон MAX \& VK Education} \hfill \textit{2025}
+\begin{itemize}[leftmargin=0.5cm, itemsep=0pt, topsep=2pt]
+    \item Написал диалогового чат-бота для мессенджера MAX на \textbf{Python}, обрабатывающего 500+ пользовательских взаимодействий ежедневно.
+\end{itemize}
+
+\vspace{4pt}
+\textbf{Алгоритмический робот для лабиринта} | \textit{MTS True Tech Champ 2025} \hfill \textit{2025}
+\begin{itemize}[leftmargin=0.5cm, itemsep=0pt, topsep=2pt]
+    \item Разработал алгоритмы поиска пути на \textbf{Python}, позволившие роботу пройти сетку 50x50 менее чем за 30 секунд без столкновений.
+\end{itemize}
+
+\vspace{4pt}
+\textbf{Анализ данных и алгоритмы} | \textit{DANO \& MTS True Tech Champ} \hfill \textit{2023}
+\begin{itemize}[leftmargin=0.5cm, itemsep=0pt, topsep=2pt]
+    \item Провел исследовательский проект по анализу данных (\textbf{Python}), выполнив очистку и обработку датасетов объемом 10 000+ записей.
+\end{itemize}
+
+\vspace{4pt}
+\textbf{Прочие хакатоны}
+\begin{itemize}[leftmargin=0.5cm, itemsep=0pt, topsep=2pt]
+    \item Альфа Кейс-чемпионат, Кейс-чемпионат MIR, Changellenge >>
+CUP RUSSIA 2026, Changellenge >> CUP IT 2026
+\end{itemize}
+% -------------------- EDUCATIONAL COURSES --------------------
+\section{Курсы и сертификаты}
+\begin{itemize}[leftmargin=0.5cm, itemsep=2pt, topsep=2pt]
+    \item \textbf{Т-Образование:} Алгоритмы и структуры данных \hfill \textit{2026}
+    \item \textbf{Яндекс:} Тренировки по алгоритмам \hfill \textit{2026}
+    \item \textbf{Yadro Education:} Разработка микросервисных приложений на Go \hfill \textit{2025}
+    \item \textbf{Яндекс Лицей:} Основы промышленного программирования на Python \hfill \textit{2023 -- 2024}
+    \item \textbf{Яндекс Лицей:} Основы программирования на Python \hfill \textit{2022 -- 2023}
+\end{itemize}
+
+\end{document}
